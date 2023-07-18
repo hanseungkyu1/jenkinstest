@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>헬로우</title>
+</head>
+<body>
+<div id="content">ㅎㅇㅎㅇ</div>
+<button id="btnClick" onclick="btnClick()">크을릭</button>
+<div id="content2"></div>
+</body>
+
+<script type="text/javascript">
+    function btnClick() {
+        $.ajax({
+            url: "/hello",
+            method: "GET",
+            dataTYpe: "text",
+            success: function (data) {
+                document.getElementById('content2').innerHTML = data;
+            }
+        })
+    }
+
+</script>
+</html>
